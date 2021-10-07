@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<li
+  className="nav-item dropdown"
+>
+  <button
+    aria-expanded="false"
+    aria-haspopup="true"
+    className="nav-link btn button-link dropdown-toggle"
+    data-toggle="dropdown"
+    id="navbarDropdown"
+    type="button"
+  >
+    <i
+      className="fas fa-flag"
+    />
+     
+    EN
+  </button>
+  <div
+    aria-labelledby="navbarDropdown"
+    className="dropdown-menu"
+  >
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
+    >
+      en
+    </button>
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
+    >
+      cn
+    </button>
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
+    >
+      es
+    </button>
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
+    >
+      fr
+    </button>
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
+    >
+      ru
+    </button>
+    <button
+      className="dropdown-item"
+      onClick={[Function]}
+      type="button"
+    >
+      vn
+    </button>
+  </div>
+</li>
+`;

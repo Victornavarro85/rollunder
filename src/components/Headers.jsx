@@ -46,6 +46,9 @@ const NavSections = () => (
 
 const Headers = () => (
   <header>
+    <div className="container centered">
+      <img className="logo" src="logo-rollunder.png"></img>
+    </div>
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <Logo />
       <HamburgerBtn />

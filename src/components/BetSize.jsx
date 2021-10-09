@@ -24,7 +24,7 @@ BetSize.propTypes = {
 };
 BetSize.defaultProps = {
   min: 0.1,
-  max: 0.3
+  max: 0.25
 };
 
 export default BetSize;

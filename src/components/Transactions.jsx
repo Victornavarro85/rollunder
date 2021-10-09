@@ -11,9 +11,11 @@ const MergedLog = ({ network, mergedLog }) => {
   const { logBetEvent, logResultEvent } = mergedLog;
   const playerNumber = Number(logBetEvent.returnValues.PlayerNumber);
   let valueEth = '?';
-  let diceResult = '?';
+  let diceResult = '';
   let sign = '?';
   let alertClass = 'secondary';
+  let resultDisplay = "show";
+  let resultTagDisplay = "hide";
   // resolved bet case
   if (typeof logResultEvent !== 'undefined') {
     diceResult = Number(logResultEvent.returnValues.DiceResult);
@@ -21,14 +23,22 @@ const MergedLog = ({ network, mergedLog }) => {
     valueEth = (logResultEvent.returnValues.Value * (10 ** (-18))).toFixed(8);
     sign = playerWon ? '<' : '>';
     alertClass = playerWon ? 'success' : 'danger';
+    resultDisplay = "hide";
+    resultTagDisplay = playerWon ? 'show' : 'hide';
   }
   return (
     <div className={`row d-inline-flex list-group-item list-group-item-${alertClass}`}>
       <div className="col-sm-2 d-block">
+        <div id="image-loading-result" className={`${resultDisplay}`}>
+          <img src="817.gif" alt="Signo de interrogación sobre un fondo negro circular" className="small-img"></img>
+        </div>
         <h3>{diceResult}</h3>
       </div>
       <div className="col-10">
         <div className="w-100">
+          <div className={`${resultTagDisplay}`}>
+            <span className="tag"> BET WON!</span>
+          </div>
           {valueEth}
           &nbsp;
           BNB
@@ -72,7 +82,7 @@ const TransactionsFilterButtons = ({ onClick }) => (
   <nav className="nav">
     <button
       type="button"
-      className="btn btn-link active"
+      className="btn btn-link active left"
       onClick={() => onClick('#all-transactions')}
     >
       <FormattedMessage

@@ -6,8 +6,7 @@ const Footers = () => (
   <footer className="Footers d-none d-md-block">
     <div className="container">
       <span className="text-muted">
-          Copyright (c) - Etheroll v
-        {version}
+          <a href="how-it-works.html">How it works?</a> - <a href="provably-fair.html">Provably fair</a> - support@rollunder.com - Provably fair roll dice game based on BNB Network.
       </span>
     </div>
   </footer>

@@ -41,7 +41,7 @@ ValueSlider.propTypes = {
 };
 ValueSlider.defaultProps = {
   step: 1,
-  min: 0,
+  min: 2,
   max: 100,
   addonText: null,
   toFixedDigits: null,

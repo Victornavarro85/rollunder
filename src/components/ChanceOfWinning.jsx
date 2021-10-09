@@ -15,7 +15,7 @@ const ChanceOfWinning = ({
     </b>
     <ValueSlider
       value={chances}
-      min={min}
+      min={2}
       max={max}
       updateValue={updateChances}
       addonText="&nbsp;%&nbsp;"
@@ -30,7 +30,7 @@ ChanceOfWinning.propTypes = {
   updateChances: func.isRequired,
 };
 ChanceOfWinning.defaultProps = {
-  min: 0,
+  min: 2,
   max: 100,
 };
 

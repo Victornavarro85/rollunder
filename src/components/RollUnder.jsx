@@ -9,6 +9,7 @@ import ChanceOfWinning from './ChanceOfWinning';
 import RollUnderRecap from './RollUnderRecap';
 import RollButton from './RollButton';
 import Transactions from './Transactions';
+import { getProfit } from '../utils/etheroll-contract';
 
 
 const RollUnder = (props) => {
@@ -18,10 +19,16 @@ const RollUnder = (props) => {
     updateState,
   } = props;
   const rollUnder = chances + 1;
+  let showWarning = "hide";
   const onRollClickProps = {
     accountAddress, rollUnder, contract, betSize,
   };
-  const rollDisabled = accountAddress === null;
+  let rollDisabled = accountAddress === null;
+  //MaxProfit for the BETA = 0.5BNB
+  if(getProfit(betSize, chances)>0.5){
+    rollDisabled = true;
+    showWarning= "show";
+  };
   return (
     <div>
       <form className="RollUnder">
@@ -30,6 +37,7 @@ const RollUnder = (props) => {
         <RollUnderRecap value={rollUnder} betSize={betSize} />
         <RollButton isDisabled={rollDisabled} onClick={() => onRollClick(onRollClickProps)} />
       </form>
+      <div id="warning" className={`${showWarning}`}>The max profit cannot be > 0.5BNB <span id="explanation"></span></div>
       <Transactions
         network={network}
         onClick={transactionsFilter => filterTransactions(transactionsFilter)}

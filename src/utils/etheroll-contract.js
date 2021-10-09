@@ -3,17 +3,17 @@ import etherollAbi from './etheroll-abi';
 // TODO require vs import
 // const SolidityEvent = require('web3/lib/web3/event.js');
 
-const HOUSE_EDGE = 1 / 100.0;
+const HOUSE_EDGE = 5 / 100.0;
 
 const Networks = Object.freeze({ mainnet: 1, morden: 2, ropsten: 3, rinkeby:4, bsctest:97});
 
 const contractAddresses = {
-  [Networks.mainnet]: '0xf478c8Bc5448236d52067c96F8f4C8376E62Fa8f',
-  [Networks.ropsten]: '0xb50cb2f458c1EB2F3f2ef5448c1e52eE12316462',
+  //[Networks.mainnet]: '0xf478c8Bc5448236d52067c96F8f4C8376E62Fa8f',
+  //[Networks.ropsten]: '0xb50cb2f458c1EB2F3f2ef5448c1e52eE12316462',
   //[Networks.rinkeby]: '0xdF0A0a6f20DB04D3219a7DA6D42Ed9FE63EA6AE8'
   //[Networks.ropsten]: '0xCDa35b320db29C42ba3A36aC448D4C963AD2CcAe',
-  [Networks.rinkeby]: '0x88A2d1a5a855050D53AE74c83ABf5948189fF57A',
-  [Networks.bsctest]: '0xcf4B0ceF63df2c170CCc605CcF88aBcB4b5EBFae' //my contract- interactions work!
+  //[Networks.rinkeby]: '0x88A2d1a5a855050D53AE74c83ABf5948189fF57A',
+  [Networks.bsctest]: '0x54d18772f80a02C75D30cDAC655bdA5Bb1cC75C4' //my contract- interactions work!
 
 };
 
@@ -78,7 +78,7 @@ class EtherollContract {
       } else {
         const { address } = this;
         const toBlock = blockNumber;
-        const fromBlock = toBlock - 10000;
+        const fromBlock = toBlock - 5000;
         const options = {
           address,
           fromBlock,

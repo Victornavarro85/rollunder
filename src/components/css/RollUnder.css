@@ -28,9 +28,9 @@ body{
 .col-sm-2 {
     flex: 0 0 16.666667%;
     max-width: 10.667%;
-    padding-top: 5%;
-    padding-left: 3%;
-  }
+    padding-top: 3%;
+    padding-left: 2%;
+}
 
   .rc-slider-handle {
     border-radius: 0%;
@@ -49,13 +49,13 @@ body{
 }
 
 .form-group {
-    margin-bottom: 5rem;
-    padding-bottom: 24px;
+    margin-bottom: 3rem;
+    padding-bottom: 0px;
     margin-top: 1rem;
 }
 
 .row.roll-under {
-    margin-top: -4rem;
+    margin-top: 0rem;
 }
 
 .rc-slider-track {
@@ -64,4 +64,207 @@ body{
     height: 4px;
     border-radius: 6px;
     background-color: #007bff;
+}
+.small-img {
+    height: 105px;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.show{
+  display:block;
+}
+
+.hide{
+  display:none;
+}
+
+.list-group-item-success {
+    color: green;
+    background-color: #000;
+}
+
+.list-group-item-danger {
+    color: #bd0000;
+    background-color: #000;
+}
+
+.list-group-item-secondary {
+    color: #fff;
+    background-color: #000;
+}
+
+.w-100 {
+    width: 103% !important;
+}
+
+.container.centered {
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
+#warning {
+    font-size: 12px;
+    color: red;
+}
+
+.rc-slider-track {
+    background-color: #ffb000;
+}
+
+.btn {
+    color: #fff;
+    background-color: #ffb000;
+    border-color: #ffb000;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #ffb000;
+    text-decoration: none;
+}
+
+a {
+    color: #ffb000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #be7c02;
+    text-decoration: underline;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #be7c02;
+    border-color: #be7c02;
+}
+
+.btn:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #be7c02;
+    border-color: #be7c02;
+}
+
+.btn-link:hover {
+    color: #be7c02;
+    text-decoration: underline;
+}
+.rc-slider-dot {
+    position: absolute;
+    bottom: -2px;
+    margin-left: -3px;
+    width: 3px;
+    height: 9px;
+    border: 2px solid #ffb000;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 0%;
+    vertical-align: middle;
+}
+.rc-slider-handle {
+    border-radius: 0%;
+    border: solid 2px #ffb000;
+    background-color: #ffb000;
+    width: 7px;
+    height: 15px;
+}
+
+.Footers {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn.disabled, .btn:disabled {
+    color: #fff;
+    background-color: #505050;
+    border-color: #505050;
+}
+
+.card.transactions {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.card-header {
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: 0px solid rgba(0,0,0,.125);
+  }
+
+.btn{
+    padding:0;
+  }
+.btn.btn-primary.btn-lg.col-md-3 {
+      padding: 1rem;
+  }
+
+.btn.btn-link.active.left {
+    margin-right: 20px;
+
+}
+.btn.btn-link{
+    margin-bottom: 20px;
+}
+
+.logo{
+    width:350px;
+}
+
+.tag {
+  background: #28a745;
+  border-radius: 3px 3px 3px 3px;
+  color: #fff;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  font-weight: 700;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+
+
+.tag:hover {
+  background-color: #1e7e34;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: #1e7e34;
+}
+
+button.btn.btn-lg.col-md-3 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button.btn.btn-link {
+    background-color: transparent;
+    border-color: none;
+    border: none;
+    color: #ffb000;
+}
+
+.btn:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #bc7c02;
+    background-color: transparent;
+    /* border-color: #be7c02; */
 }
